@@ -1,0 +1,1184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IODevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.io-link.com/IODD/2010/10" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD1.1.xsd">
+	<DocumentInfo copyright="Copyright 2023, Leuze electronic" releaseDate="2023-08-01" version="V1.2" />
+	<ProfileHeader>
+		<ProfileIdentification>IO Device Profile</ProfileIdentification>
+		<ProfileRevision>1.1</ProfileRevision>
+		<ProfileName>Device Profile for IO Devices</ProfileName>
+		<ProfileSource>IO-Link Consortium</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>1</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>IODD</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity vendorId="338" vendorName="Leuze electronic GmbH + Co. KG" deviceId="3093">
+			<VendorText textId="T_VendorText" />
+			<VendorUrl textId="T_VendorUrl" />
+			<VendorLogo name="Leuze_electronic-logo.png" />
+			<DeviceName textId="T_DeviceName" />
+			<DeviceFamily textId="T_DeviceFamily" />
+			<DeviceVariantCollection>
+				<DeviceVariant productId="50149549" deviceIcon="Leuze_electronic-50149549-icon.png" deviceSymbol="Leuze_electronic-50149549-pic.png">
+					<Name textId="TN_ProductName_DMU230-3000_LA-M12" />
+					<Description textId="TD_ProductDescription_Ultrasonic Distance Sensor" />
+				</DeviceVariant>
+			</DeviceVariantCollection>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Features blockParameter="true" dataStorage="true" profileCharacteristic="1 32768 32769 32770 32771 32772">
+				<SupportedAccessLocks parameter="true" dataStorage="true" localParameterization="true" localUserInterface="false" />
+			</Features>
+			<VariableCollection>
+				<StdVariableRef id="V_DirectParameters_1" />
+				<StdVariableRef id="V_DirectParameters_2" />
+				<StdVariableRef id="V_SystemCommand">
+					<SingleValue value="64">
+						<Name textId="TN_SystemCommand_64" />
+					</SingleValue>
+					<SingleValue value="65">
+						<Name textId="TN_SystemCommand_65" />
+					</SingleValue>
+					<SingleValue value="66">
+						<Name textId="TN_SystemCommand_66" />
+					</SingleValue>
+					<SingleValue value="67">
+						<Name textId="TN_SystemCommand_67" />
+					</SingleValue>
+					<SingleValue value="68">
+						<Name textId="TN_SystemCommand_68" />
+					</SingleValue>
+					<SingleValue value="69">
+						<Name textId="TN_SystemCommand_69" />
+					</SingleValue>
+					<SingleValue value="70">
+						<Name textId="TN_SystemCommand_70" />
+					</SingleValue>
+					<SingleValue value="71">
+						<Name textId="TN_SystemCommand_71" />
+					</SingleValue>
+					<SingleValue value="72">
+						<Name textId="TN_SystemCommand_72" />
+					</SingleValue>
+					<SingleValue value="73">
+						<Name textId="TN_SystemCommand_73" />
+					</SingleValue>
+					<SingleValue value="74">
+						<Name textId="TN_SystemCommand_74" />
+					</SingleValue>
+					<SingleValue value="79">
+						<Name textId="TN_SystemCommand_79" />
+					</SingleValue>
+					<StdSingleValueRef value="130" />
+					<SingleValue value="161">
+						<Name textId="TN_SystemCommand_161" />
+					</SingleValue>
+					<SingleValue value="162">
+						<Name textId="TN_SystemCommand_162" />
+					</SingleValue>
+					<SingleValue value="163">
+						<Name textId="TN_SystemCommand_163" />
+					</SingleValue>
+					<SingleValue value="164">
+						<Name textId="TN_SystemCommand_164" />
+					</SingleValue>
+					<SingleValue value="165">
+						<Name textId="TN_SystemCommand_165" />
+					</SingleValue>
+					<SingleValue value="166">
+						<Name textId="TN_SystemCommand_166" />
+					</SingleValue>
+					<SingleValue value="240">
+						<Name textId="TN_SystemCommand_240" />
+					</SingleValue>
+					<SingleValue value="241">
+						<Name textId="TN_SystemCommand_241" />
+					</SingleValue>
+					<SingleValue value="242">
+						<Name textId="TN_SystemCommand_242" />
+					</SingleValue>
+					<SingleValue value="243">
+						<Name textId="TN_SystemCommand_243" />
+					</SingleValue>
+				</StdVariableRef>
+				<StdVariableRef id="V_DeviceAccessLocks">
+					<StdRecordItemRef subindex="1" defaultValue="0" />
+					<StdRecordItemRef subindex="3" defaultValue="0" />
+				</StdVariableRef>
+				<StdVariableRef id="V_VendorName" defaultValue="Leuze electronic GmbH + Co. KG" />
+				<StdVariableRef id="V_VendorText" defaultValue="The Sensor People" />
+				<StdVariableRef id="V_ProductID" />
+				<StdVariableRef id="V_ProductName" />
+				<StdVariableRef id="V_ProductText" />
+				<StdVariableRef id="V_FirmwareRevision" />
+				<StdVariableRef id="V_ApplicationSpecificTag" fixedLengthRestriction="32" />
+				<StdVariableRef id="V_ErrorCount" />
+				<StdVariableRef id="V_DeviceStatus" />
+				<StdVariableRef id="V_ProcessDataInput" />
+				<Variable id="V_TeachChannel" defaultValue="1" accessRights="rw" index="58">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="1">
+							<Name textId="TN_TeachChannel_BDC1" />
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_TeachChannel_BDC2" />
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_TeachChannel" />
+					<Description textId="TD_TeachChannel" />
+				</Variable>
+				<Variable id="V_TeachStatus" accessRights="ro" dynamic="true" index="59">
+					<Datatype xsi:type="RecordT" bitLength="8" subindexAccessSupported="false">
+						<RecordItem subindex="3" bitOffset="0">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="4">
+								<SingleValue value="0">
+									<Name textId="TN_TeachState_State_0" />
+								</SingleValue>
+								<SingleValue value="1">
+									<Name textId="TN_TeachState_State_1" />
+								</SingleValue>
+								<SingleValue value="2">
+									<Name textId="TN_TeachState_State_2" />
+								</SingleValue>
+								<SingleValue value="3">
+									<Name textId="TN_TeachState_State_3" />
+								</SingleValue>
+								<SingleValue value="4">
+									<Name textId="TN_TeachState_State_4" />
+								</SingleValue>
+								<SingleValue value="5">
+									<Name textId="TN_TeachState_State_5" />
+								</SingleValue>
+								<SingleValue value="6">
+									<Name textId="TN_TeachState_State_6" />
+								</SingleValue>
+								<SingleValue value="7">
+									<Name textId="TN_TeachState_State_7" />
+								</SingleValue>
+							</SimpleDatatype>
+							<Name textId="TN_TeachState_State" />
+							<Description textId="TD_TeachState_State" />
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo subindex="3" defaultValue="0" />
+					<Name textId="TN_TeachState" />
+					<Description textId="TD_TeachState" />
+				</Variable>
+				<Variable id="V_SetPointsBDC1" accessRights="rw" dynamic="true" index="60">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="300" upperValue="3000" />
+							</SimpleDatatype>
+							<Name textId="TN_SetPoints_BDC1_SP1" />
+							<Description textId="TD_SetPoints_SP1" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="300" upperValue="3000" />
+							</SimpleDatatype>
+							<Name textId="TN_SetPoints_BDC1_SP2" />
+							<Description textId="TD_SetPoints_SP2" />
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo subindex="1" defaultValue="300" />
+					<RecordItemInfo subindex="2" defaultValue="3000" />
+					<Name textId="TN_SetPointsBDC1" />
+					<Description textId="TD_SetPointsBDC1" />
+				</Variable>
+				<Variable id="V_SetPointsBDC2" accessRights="rw" dynamic="true" index="62">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="300" upperValue="3000" />
+							</SimpleDatatype>
+							<Name textId="TN_SetPoints_BDC2_SP1" />
+							<Description textId="TD_SetPoints_SP1" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="300" upperValue="3000" />
+							</SimpleDatatype>
+							<Name textId="TN_SetPoints_BDC2_SP2" />
+							<Description textId="TD_SetPoints_SP2" />
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo subindex="1" defaultValue="300" />
+					<RecordItemInfo subindex="2" defaultValue="3000" />
+					<Name textId="TN_SetPointsBDC2" />
+					<Description textId="TD_SetPointsBDC2" />
+				</Variable>
+				<Variable id="V_SwitchPointBDC1" accessRights="rw" dynamic="true" index="61">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="24">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+								<SingleValue value="0">
+									<Name textId="TN_SwitchPoint_Logic_NO" />
+								</SingleValue>
+								<SingleValue value="1">
+									<Name textId="TN_SwitchPoint_Logic_NC" />
+								</SingleValue>
+							</SimpleDatatype>
+							<Name textId="TN_SwitchPoint_Logic" />
+							<Description textId="TD_SwitchPoint_Logic" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="16">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+								<SingleValue value="0">
+									<Name textId="TN_SwitchPoint_Mode_Deactivated" />
+								</SingleValue>
+								<SingleValue value="1">
+									<Name textId="TN_SwitchPoint_Mode_SinglePoint" />
+								</SingleValue>
+								<SingleValue value="2">
+									<Name textId="TN_SwitchPoint_Mode_Window" />
+								</SingleValue>
+								<SingleValue value="3">
+									<Name textId="TN_SwitchPoint_Mode_TwoPoint" />
+								</SingleValue>
+								<SingleValue value="128">
+									<Name textId="TN_Switchpoint_Mode_Reflex" />
+								</SingleValue>
+							</SimpleDatatype>
+							<Name textId="TN_SwitchPoint_Mode" />
+							<Description textId="TD_SwitchPoint_Mode" />
+						</RecordItem>
+						<RecordItem subindex="3" bitOffset="0">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="5" upperValue="50" />
+							</SimpleDatatype>
+							<Name textId="TN_SwitchPoint_Hysteresis" />
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo subindex="1" defaultValue="0" />
+					<RecordItemInfo subindex="2" defaultValue="2" />
+					<RecordItemInfo subindex="3" defaultValue="15" />
+					<Name textId="TN_SwitchPointBDC1" />
+					<Description textId="TD_SwitchPointBDC1" />
+				</Variable>
+				<Variable id="V_SwitchPointBDC2" accessRights="rw" dynamic="true" index="63">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="24">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+								<SingleValue value="0">
+									<Name textId="TN_SwitchPoint_Logic_NO" />
+								</SingleValue>
+								<SingleValue value="1">
+									<Name textId="TN_SwitchPoint_Logic_NC" />
+								</SingleValue>
+							</SimpleDatatype>
+							<Name textId="TN_SwitchPoint_Logic" />
+							<Description textId="TD_SwitchPoint_Logic" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="16">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+								<SingleValue value="0">
+									<Name textId="TN_SwitchPoint_Mode_Deactivated" />
+								</SingleValue>
+								<SingleValue value="1">
+									<Name textId="TN_SwitchPoint_Mode_SinglePoint" />
+								</SingleValue>
+								<SingleValue value="2">
+									<Name textId="TN_SwitchPoint_Mode_Window" />
+								</SingleValue>
+								<SingleValue value="3">
+									<Name textId="TN_SwitchPoint_Mode_TwoPoint" />
+								</SingleValue>
+								<SingleValue value="128">
+									<Name textId="TN_Switchpoint_Mode_Reflex" />
+								</SingleValue>
+							</SimpleDatatype>
+							<Name textId="TN_SwitchPoint_Mode" />
+							<Description textId="TD_SwitchPoint_Mode" />
+						</RecordItem>
+						<RecordItem subindex="3" bitOffset="0">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="5" upperValue="50" />
+							</SimpleDatatype>
+							<Name textId="TN_SwitchPoint_Hysteresis" />
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo subindex="1" defaultValue="0" />
+					<RecordItemInfo subindex="2" defaultValue="2" />
+					<RecordItemInfo subindex="3" defaultValue="15" />
+					<Name textId="TN_SwitchPointBDC2" />
+					<Description textId="TD_SwitchPointBDC2" />
+				</Variable>
+				<Variable id="V_Lot" accessRights="ro" index="64">
+					<Datatype xsi:type="StringT" fixedLength="16" encoding="UTF-8" />
+					<Name textId="TN_Lot" />
+					<Description textId="TD_Lot" />
+				</Variable>
+				<Variable id="V_DS" accessRights="rw" index="66" defaultValue="0">
+					<Datatype xsi:type="UIntegerT" bitLength="16">
+						<ValueRange lowerValue="0" upperValue="10000" />
+					</Datatype>
+					<Name textId="TN_DS" />
+					<Description textId="TD_DS" />
+				</Variable>
+				<Variable id="V_DR" accessRights="rw" index="67" defaultValue="0">
+					<Datatype xsi:type="UIntegerT" bitLength="16">
+						<ValueRange lowerValue="0" upperValue="10000" />
+					</Datatype>
+					<Name textId="TN_DR" />
+					<Description textId="TD_DR" />
+				</Variable>
+				<Variable id="V_OutputModeinSIOMode" accessRights="rw" index="70" defaultValue="0">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_OutputModeinSIOMode_PP" />
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_OutputModeinSIOMode_NPN" />
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_OutputModeinSIOMode_PNP" />
+						</SingleValue>
+						<SingleValue value="3">
+							<Name textId="TN_OutputModeinSIOMode_IO_LISTEN" />
+						</SingleValue>
+						<SingleValue value="4">
+							<Name textId="TN_OutputModeinSIOMode_Synchron" />
+						</SingleValue>
+						<SingleValue value="5">
+							<Name textId="TN_OutputModeinSIOMode_Multiplex" />
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_OutputModeinSIOMode" />
+					<Description textId="TD_OutputModeinSIOMode" />
+				</Variable>
+				<Variable id="V_TeachvaluesBDC1SP1" accessRights="ro" dynamic="true" index="80">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP1" />
+							<Description textId="TD_Teachvalues_TP1" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP2" />
+							<Description textId="TD_Teachvalues_TP2" />
+						</RecordItem>
+					</Datatype>
+					<Name textId="TN_TeachvaluesBDC1SP1" />
+					<Description textId="TD_TeachvaluesBDC1SP1" />
+				</Variable>
+				<Variable id="V_TeachvaluesBDC1SP2" accessRights="ro" dynamic="true" index="81">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP1" />
+							<Description textId="TD_Teachvalues_TP1" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP2" />
+							<Description textId="TD_Teachvalues_TP2" />
+						</RecordItem>
+					</Datatype>
+					<Name textId="TN_TeachvaluesBDC1SP2" />
+					<Description textId="TD_TeachvaluesBDC1SP2" />
+				</Variable>
+				<Variable id="V_TeachvaluesBDC2SP1" accessRights="ro" dynamic="true" index="82">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP1" />
+							<Description textId="TD_Teachvalues_TP1" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP2" />
+							<Description textId="TD_Teachvalues_TP2" />
+						</RecordItem>
+					</Datatype>
+					<Name textId="TN_TeachvaluesBDC2SP1" />
+					<Description textId="TD_TeachvaluesBDC2SP1" />
+				</Variable>
+				<Variable id="V_TeachvaluesBDC2SP2" accessRights="ro" dynamic="true" index="83">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP1" />
+							<Description textId="TD_Teachvalues_TP1" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_Teachvalues_TP2" />
+							<Description textId="TD_Teachvalues_TP2" />
+						</RecordItem>
+					</Datatype>
+					<Name textId="TN_TeachvaluesBDC2SP2" />
+					<Description textId="TD_TeachvaluesBDC2SP2" />
+				</Variable>
+				<Variable id="V_ProcessDataLimits" accessRights="ro" dynamic="true" index="84">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_ProcessDataLimits_Lower" />
+							<Description textId="TD_ProcessDataLimits_Lower" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0" accessRightRestriction="ro">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16" />
+							<Name textId="TN_ProcessDataLimits_Upper" />
+							<Description textId="TD_ProcessDataLimits_Upper" />
+						</RecordItem>
+					</Datatype>
+					<Name textId="TN_ProcessDataLimits" />
+					<Description textId="TD_ProcessDataLimits" />
+				</Variable>
+				<Variable id="V_Switchcounter" accessRights="ro" index="85" dynamic="true" defaultValue="0">
+					<Datatype xsi:type="UIntegerT" bitLength="32" />
+					<Name textId="TN_Switchcounter" />
+					<Description textId="TD_Switchcounter" />
+				</Variable>
+				<Variable id="V_Temperature internal" accessRights="ro" dynamic="true" index="86">
+					<Datatype xsi:type="IntegerT" bitLength="16" />
+					<Name textId="TN_Temperature" />
+					<Description textId="TD_Temperature" />
+				</Variable>
+				<Variable id="V_Temp_Komp" accessRights="rw" index="74" defaultValue="0">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_Temp_Komp_OFF" />
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_Temp_Komp_ON" />
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_Temp_Komp" />
+				</Variable>
+				<Variable id="V_Analog_Output_Mode" accessRights="rw" index="71" defaultValue="2">
+					<Datatype xsi:type="UIntegerT" bitLength="8">
+						<SingleValue value="0">
+							<Name textId="TN_Analog_Output_Mode_Disabled" />
+						</SingleValue>
+						<SingleValue value="1">
+							<Name textId="TN_Analog_Output_Mode_0_20MA" />
+						</SingleValue>
+						<SingleValue value="2">
+							<Name textId="TN_Analog_Output_Mode_4_20MA" />
+						</SingleValue>
+						<SingleValue value="3">
+							<Name textId="TN_Analog_Output_Mode_0_10V" />
+						</SingleValue>
+						<SingleValue value="4">
+							<Name textId="TN_Reserved" />
+						</SingleValue>
+						<SingleValue value="5">
+							<Name textId="TN_Reserved" />
+						</SingleValue>
+						<SingleValue value="6">
+							<Name textId="TN_Reserved" />
+						</SingleValue>
+						<SingleValue value="7">
+							<Name textId="TN_Reserved" />
+						</SingleValue>
+					</Datatype>
+					<Name textId="TN_Analog_Output_Mode" />
+					<Description textId="TD_Analog_Output_Mode" />
+				</Variable>
+				<Variable id="V_Analog_Range" accessRights="rw" dynamic="true" index="72">
+					<Datatype xsi:type="RecordT" bitLength="32">
+						<RecordItem subindex="1" bitOffset="16">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="300" upperValue="3000" />
+							</SimpleDatatype>
+							<Name textId="TN_Analog_Range_Lower" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="16">
+								<ValueRange lowerValue="300" upperValue="3000" />
+							</SimpleDatatype>
+							<Name textId="TN_Analog_Range_Upper" />
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo subindex="1" defaultValue="300" />
+					<RecordItemInfo subindex="2" defaultValue="3000" />
+					<Name textId="TN_Analog_Range" />
+				</Variable>
+				<Variable id="V_Network" accessRights="rw" dynamic="true" index="88">
+					<Datatype xsi:type="RecordT" bitLength="16">
+						<RecordItem subindex="1" bitOffset="8">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+								<SingleValue value="0">
+									<Name textId="TN_Network_Master" />
+								</SingleValue>
+								<SingleValue value="1">
+									<Name textId="TN_Network_Slave" />
+								</SingleValue>
+							</SimpleDatatype>
+							<Name textId="TN_Network_Role" />
+						</RecordItem>
+						<RecordItem subindex="2" bitOffset="0">
+							<SimpleDatatype xsi:type="UIntegerT" bitLength="8">
+								<ValueRange lowerValue="1" upperValue="10" />
+							</SimpleDatatype>
+							<Name textId="TN_Network_Number_Slave" />
+						</RecordItem>
+					</Datatype>
+					<RecordItemInfo subindex="1" defaultValue="0" />
+					<RecordItemInfo subindex="2" defaultValue="1" />
+					<Name textId="TN_Network" />
+				</Variable>
+			</VariableCollection>
+			<ProcessDataCollection>
+				<ProcessData id="P_ProcessData">
+					<ProcessDataIn id="PI_ProcessDataIn" bitLength="16">
+						<Datatype xsi:type="RecordT" bitLength="16" subindexAccessSupported="false">
+							<RecordItem subindex="1" bitOffset="2" accessRightRestriction="ro">
+								<SimpleDatatype xsi:type="UIntegerT" bitLength="14">
+									<ValueRange lowerValue="0" upperValue="16383" />
+								</SimpleDatatype>
+								<Name textId="TN_Measuredvalue" />
+							</RecordItem>
+							<RecordItem subindex="2" bitOffset="0" accessRightRestriction="ro">
+								<SimpleDatatype xsi:type="BooleanT">
+									<SingleValue value="false">
+										<Name textId="TN_Switchstate_False" />
+									</SingleValue>
+									<SingleValue value="true">
+										<Name textId="TN_Switchstate_True" />
+									</SingleValue>
+								</SimpleDatatype>
+								<Name textId="TN_SwitchstateBDC1" />
+							</RecordItem>
+							<RecordItem subindex="3" bitOffset="1" accessRightRestriction="ro">
+								<SimpleDatatype xsi:type="BooleanT">
+									<SingleValue value="false">
+										<Name textId="TN_Switchstate_False" />
+									</SingleValue>
+									<SingleValue value="true">
+										<Name textId="TN_Switchstate_True" />
+									</SingleValue>
+								</SimpleDatatype>
+								<Name textId="TN_SwitchstateBDC2" />
+							</RecordItem>
+						</Datatype>
+						<Name textId="TN_ProcessDataIn" />
+					</ProcessDataIn>
+				</ProcessData>
+			</ProcessDataCollection>
+			<ErrorTypeCollection>
+				<StdErrorTypeRef code="128" additionalCode="0" />
+				<StdErrorTypeRef code="128" additionalCode="17" />
+				<StdErrorTypeRef code="128" additionalCode="18" />
+				<StdErrorTypeRef code="128" additionalCode="32" />
+				<StdErrorTypeRef code="128" additionalCode="35" />
+				<StdErrorTypeRef code="128" additionalCode="48" />
+				<StdErrorTypeRef code="128" additionalCode="49" />
+				<StdErrorTypeRef code="128" additionalCode="50" />
+				<StdErrorTypeRef code="128" additionalCode="51" />
+				<StdErrorTypeRef code="128" additionalCode="52" />
+				<StdErrorTypeRef code="128" additionalCode="53" />
+				<StdErrorTypeRef code="128" additionalCode="54" />
+				<StdErrorTypeRef code="128" additionalCode="64" />
+				<StdErrorTypeRef code="128" additionalCode="65" />
+				<StdErrorTypeRef code="128" additionalCode="130" />
+			</ErrorTypeCollection>
+			<EventCollection>
+				<Event code="36000" type="Warning">
+					<Name textId="TN_Event_36000" />
+					<Description textId="TD_Event_36000" />
+				</Event>
+				<Event code="36350" type="Error">
+					<Name textId="TN_Event_36350" />
+					<Description textId="TD_Event_36350" />
+				</Event>
+				<Event code="36351" type="Error">
+					<Name textId="TN_Event_36351" />
+					<Description textId="TD_Event_36351" />
+				</Event>
+			</EventCollection>
+			<UserInterface>
+				<ProcessDataRefCollection>
+					<ProcessDataRef processDataId="PI_ProcessDataIn">
+						<ProcessDataRecordItemInfo subindex="1" unitCode="1013" />
+						<ProcessDataRecordItemInfo subindex="2" />
+					</ProcessDataRef>
+				</ProcessDataRefCollection>
+				<MenuCollection>
+					<Menu id="M_OR_MR_SR_Identification">
+						<Name textId="TN_Identification" />
+						<VariableRef variableId="V_VendorName" />
+						<VariableRef variableId="V_VendorText" />
+						<VariableRef variableId="V_ProductName" />
+						<VariableRef variableId="V_ProductID" />
+						<VariableRef variableId="V_ProductText" />
+						<VariableRef variableId="V_Lot" />
+						<VariableRef variableId="V_FirmwareRevision" />
+						<VariableRef variableId="V_ApplicationSpecificTag" />
+					</Menu>
+					<Menu id="M_OR_MR_SR_Observation">
+						<Name textId="TN_Observation" />
+						<RecordItemRef variableId="V_ProcessDataInput" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_ProcessDataInput" subindex="2" />
+					</Menu>
+					<Menu id="M_OR_Parameter">
+						<Name textId="TN_Parameter" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="2" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="1" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="3" unitCode="1013" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SetPointsBDC1" subindex="1" unitCode="1013" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SetPointsBDC1" subindex="2" unitCode="1013" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="2" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="1" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="3" unitCode="1013" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SetPointsBDC2" subindex="1" unitCode="1013" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_SetPointsBDC2" subindex="2" unitCode="1013" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_Analog_Range" subindex="1" unitCode="1013" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_Analog_Range" subindex="2" unitCode="1013" accessRightRestriction="ro" />
+					</Menu>
+					<Menu id="M_MR_Parameter">
+						<Name textId="TN_Parameter" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="2" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="1" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="3" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC1" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC1" subindex="2" unitCode="1013" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="2" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="1" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="3" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC2" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC2" subindex="2" unitCode="1013" />
+						<VariableRef variableId="V_TeachChannel" />
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="65" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="66" />
+						</VariableRef>
+						<VariableRef variableId="V_OutputModeinSIOMode" accessRightRestriction="ro" />
+						<VariableRef variableId="V_Analog_Output_Mode" accessRightRestriction="ro" />
+						<RecordItemRef variableId="V_Analog_Range" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_Analog_Range" subindex="2" unitCode="1013" />
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="161" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="162" />
+						</VariableRef>
+					</Menu>
+					<Menu id="M_SR_Parameter">
+						<Name textId="TN_Parameter" />
+						<MenuRef menuId="M_SR_Parameter_Setup" />
+						<MenuRef menuId="M_SR_Parameter_Control_Out1_Teach">
+							<Condition variableId="V_OutputModeinSIOMode" value="3" />
+						</MenuRef>
+						<MenuRef menuId="M_SR_Parameter_Control_Out1_Network_Sync">
+							<Condition variableId="V_OutputModeinSIOMode" value="4" />
+						</MenuRef>
+						<MenuRef menuId="M_SR_Parameter_Control_Out1_Network_Multiplex">
+							<Condition variableId="V_OutputModeinSIOMode" value="5" />
+						</MenuRef>
+						<MenuRef menuId="M_SR_Parameter_Control_Out1_BDC1" />
+						<MenuRef menuId="M_SR_Parameter_Control_BDC2" />
+						<MenuRef menuId="M_SR_Parameter_Control_Out2_Analog" />
+						<MenuRef menuId="M_SR_Parameter_Specific" />
+						<MenuRef menuId="M_SR_Parameter_Teach_Status" />
+						<MenuRef menuId="M_SR_Parameter_Teach_Values_BDC1" />
+						<MenuRef menuId="M_SR_Parameter_Teach_Values_BDC2" />
+						<MenuRef menuId="M_SR_Parameter_SingleValueTeach_Analog" />
+						<MenuRef menuId="M_SR_Parameter_SingleValueTeach" />
+						<MenuRef menuId="M_SR_Parameter_DynamicTeach" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Setup">
+						<Name textId="TN_Parameter_Setup" />
+						<RecordItemRef variableId="V_DeviceAccessLocks" subindex="1" />
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="130" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="164" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="165" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="166" />
+						</VariableRef>
+					</Menu>
+					<Menu id="M_SR_Parameter_Control_Out1_BDC1">
+						<Name textId="TN_Parameter_Control_Out1" />
+						<VariableRef variableId="V_OutputModeinSIOMode" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="2" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="1" />
+						<RecordItemRef variableId="V_SwitchPointBDC1" subindex="3" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC1" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC1" subindex="2" unitCode="1013" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Control_Out1_Teach">
+						<Name textId="TN_Parameter_Control_Out1" />
+						<VariableRef variableId="V_OutputModeinSIOMode" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Control_Out1_Network_Sync">
+						<Name textId="TN_Parameter_Network_Out1" />
+						<VariableRef variableId="V_OutputModeinSIOMode" />
+						<RecordItemRef variableId="V_Network" subindex="1" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Control_Out1_Network_Multiplex">
+						<Name textId="TN_Parameter_Network_Out1" />
+						<VariableRef variableId="V_OutputModeinSIOMode" />
+						<RecordItemRef variableId="V_Network" subindex="1" />
+						<RecordItemRef variableId="V_Network" subindex="2" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Control_Out2_Analog">
+						<Name textId="TN_Parameter_Control_Out2" />
+						<VariableRef variableId="V_Analog_Output_Mode" />
+						<RecordItemRef variableId="V_Analog_Range" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_Analog_Range" subindex="2" unitCode="1013" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Control_BDC2">
+						<Name textId="TN_Parameter_Control_BDC2" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="2" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="1" />
+						<RecordItemRef variableId="V_SwitchPointBDC2" subindex="3" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC2" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_SetPointsBDC2" subindex="2" unitCode="1013" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Specific">
+						<Name textId="TN_Parameter_Specific" />
+						<VariableRef variableId="V_Temp_Komp" />
+						<VariableRef variableId="V_DS" unitCode="1056" />
+						<VariableRef variableId="V_DR" unitCode="1056" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Teach_Status">
+						<Name textId="TN_Parameter_Teach_State" />
+						<VariableRef variableId="V_TeachStatus" accessRightRestriction="ro" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Teach_Values_BDC1">
+						<Name textId="TN_Parameter_Teach_Values_BDC1" />
+						<RecordItemRef variableId="V_TeachvaluesBDC1SP1" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_TeachvaluesBDC1SP1" subindex="2" unitCode="1013" />
+						<RecordItemRef variableId="V_TeachvaluesBDC1SP2" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_TeachvaluesBDC1SP2" subindex="2" unitCode="1013" />
+					</Menu>
+					<Menu id="M_SR_Parameter_Teach_Values_BDC2">
+						<Name textId="TN_Parameter_Teach_Values_BDC2" />
+						<RecordItemRef variableId="V_TeachvaluesBDC2SP1" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_TeachvaluesBDC2SP1" subindex="2" unitCode="1013" />
+						<RecordItemRef variableId="V_TeachvaluesBDC2SP2" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_TeachvaluesBDC2SP2" subindex="2" unitCode="1013" />
+					</Menu>
+					<Menu id="M_SR_Parameter_SingleValueTeach_Analog">
+						<Name textId="TN_Parameter_SingleValueTeach_Analog" />
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="161" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="162" />
+						</VariableRef>
+					</Menu>
+					<Menu id="M_SR_Parameter_SingleValueTeach">
+						<Name textId="TN_Parameter_SingleValueTeach" />
+						<VariableRef variableId="V_TeachChannel" />
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="65" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="66" />
+						</VariableRef>
+					</Menu>
+					<Menu id="M_SR_Parameter_DynamicTeach">
+						<Name textId="TN_Parameter_DynamicTeach" />
+						<VariableRef variableId="V_TeachChannel" />
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="71" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="72" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="73" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="74" />
+						</VariableRef>
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="79" />
+						</VariableRef>
+					</Menu>
+					<Menu id="M_OR_Diagnosis">
+						<Name textId="TN_Diagnosis" />
+						<VariableRef variableId="V_DeviceStatus" />
+						<VariableRef variableId="V_Switchcounter" />
+					</Menu>
+					<Menu id="M_MR_Diagnosis">
+						<Name textId="TN_Diagnosis" />
+						<VariableRef variableId="V_DeviceStatus" />
+						<VariableRef variableId="V_Temperature internal" unitCode="1001" />
+						<VariableRef variableId="V_Switchcounter" />
+					</Menu>
+					<Menu id="M_SR_Diagnosis">
+						<Name textId="TN_Diagnosis" />
+						<VariableRef variableId="V_DeviceStatus" />
+						<VariableRef variableId="V_Switchcounter" />
+						<VariableRef variableId="V_Temperature internal" unitCode="1001" />
+						<RecordItemRef variableId="V_ProcessDataLimits" subindex="1" unitCode="1013" />
+						<RecordItemRef variableId="V_ProcessDataLimits" subindex="2" unitCode="1013" />
+						<VariableRef variableId="V_SystemCommand">
+							<Button buttonValue="163" />
+						</VariableRef>
+					</Menu>
+				</MenuCollection>
+				<ObserverRoleMenuSet>
+					<IdentificationMenu menuId="M_OR_MR_SR_Identification" />
+					<ParameterMenu menuId="M_OR_Parameter" />
+					<ObservationMenu menuId="M_OR_MR_SR_Observation" />
+					<DiagnosisMenu menuId="M_OR_Diagnosis" />
+				</ObserverRoleMenuSet>
+				<MaintenanceRoleMenuSet>
+					<IdentificationMenu menuId="M_OR_MR_SR_Identification" />
+					<ParameterMenu menuId="M_MR_Parameter" />
+					<ObservationMenu menuId="M_OR_MR_SR_Observation" />
+					<DiagnosisMenu menuId="M_MR_Diagnosis" />
+				</MaintenanceRoleMenuSet>
+				<SpecialistRoleMenuSet>
+					<IdentificationMenu menuId="M_OR_MR_SR_Identification" />
+					<ParameterMenu menuId="M_SR_Parameter" />
+					<ObservationMenu menuId="M_OR_MR_SR_Observation" />
+					<DiagnosisMenu menuId="M_SR_Diagnosis" />
+				</SpecialistRoleMenuSet>
+			</UserInterface>
+		</DeviceFunction>
+	</ProfileBody>
+	<CommNetworkProfile xsi:type="IOLinkCommNetworkProfileT" iolinkRevision="V1.1">
+		<TransportLayers>
+			<PhysicalLayer bitrate="COM2" minCycleTime="2300" sioSupported="true" mSequenceCapability="33">
+				<Connection xsi:type="M12-4ConnectionT" connectionSymbol="Leuze_electronic-M12_4-pol-con-pic.png">
+					<ProductRef productId="50149549" />
+					<Wire1 color="BN" function="L+" />
+					<Wire2 color="WH" function="Other">
+						<Name textId="T_CONNECTION_M12_WIRE_2" />
+					</Wire2>
+					<Wire3 color="BU" function="L-" />
+					<Wire4 color="BK" function="C/Q" />
+				</Connection>
+			</PhysicalLayer>
+		</TransportLayers>
+		<Test>
+			<Config1 index="241" testValue="0xFE" />
+			<Config2 index="1000" testValue="0x01" />
+			<Config3 index="1001" testValue="0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x41,0x42,0x43,0x44,0x45,0x46" />
+			<Config7 index="2">
+				<EventTrigger appearValue="240" disappearValue="241" />
+				<EventTrigger appearValue="242" disappearValue="243" />
+			</Config7>
+		</Test>
+	</CommNetworkProfile>
+	<ExternalTextCollection>
+		<PrimaryLanguage xml:lang="en">
+			<Text id="T_VendorText" value="The Sensor People" />
+			<Text id="T_VendorUrl" value="www.leuze.com" />
+			<Text id="T_DeviceName" value="DMU230-3000/LA-M12" />
+			<Text id="T_DeviceFamily" value="DMU… series" />
+			<Text id="TN_ProductName_DMU230-3000_LA-M12" value="DMU230-3000/LA-M12" />
+			<Text id="TD_ProductDescription_Ultrasonic Distance Sensor" value="Ultrasonic Distance Sensor" />
+			<Text id="TN_SystemCommand_64" value="Teach Apply" />
+			<Text id="TN_SystemCommand_65" value="Setpoint 1 Single Value Teach" />
+			<Text id="TN_SystemCommand_66" value="Setpoint 2 Single Value Teach" />
+			<Text id="TN_SystemCommand_67" value="Two Value Teach TP1 SP1" />
+			<Text id="TN_SystemCommand_68" value="Two Value Teach TP2 SP1" />
+			<Text id="TN_SystemCommand_69" value="Two Value Teach TP1 SP2" />
+			<Text id="TN_SystemCommand_70" value="Two Value Teach TP2 SP2" />
+			<Text id="TN_SystemCommand_71" value="Setpoint 1 Dynamic Teach Start" />
+			<Text id="TN_SystemCommand_72" value="Setpoint 1 Dynamic Teach Stop" />
+			<Text id="TN_SystemCommand_73" value="Setpoint 2 Dynamic Teach Start" />
+			<Text id="TN_SystemCommand_74" value="Setpoint 2 Dynamic Teach Stop" />
+			<Text id="TN_SystemCommand_79" value="Teach Cancel" />
+			<Text id="TN_SystemCommand_163" value="Reset Diagnosis Information" />
+			<Text id="TN_SystemCommand_164" value="Stop measurement" />
+			<Text id="TN_SystemCommand_165" value="Start measurement" />
+			<Text id="TN_SystemCommand_166" value="Single measurement" />
+			<Text id="TN_SystemCommand_240" value="IO-Link 1.1 system test command 240, Event 8DFE appears" />
+			<Text id="TN_SystemCommand_241" value="IO-Link 1.1 system test command 241, Event 8DFE disappears" />
+			<Text id="TN_SystemCommand_242" value="IO-Link 1.1 system test command 242, Event 8DFF appears" />
+			<Text id="TN_SystemCommand_243" value="IO-Link 1.1 system test command 243, Event 8DFF disappears" />
+			<Text id="TN_SystemCommand_161" value="Set Analog Output Lower Limit" />
+			<Text id="TN_SystemCommand_162" value="Set Analog Output Upper Limit" />
+			<Text id="TN_TeachChannel" value="Teach-in Select" />
+			<Text id="TD_TeachChannel" value="Adressing of particular BDC for which teach-in commands apply" />
+			<Text id="TN_TeachChannel_BDC1" value="(BDC1, Q1)" />
+			<Text id="TN_TeachChannel_BDC2" value="(BDC2, Q2)" />
+			<Text id="TN_TeachState" value="Teach State" />
+			<Text id="TD_TeachState" value="indication of the current state of the teach-in procedure and teach point setting" />
+			<Text id="TN_TeachState_State" value="Teach State" />
+			<Text id="TD_TeachState_State" value="indication of the current state of the teach-in procedure" />
+			<Text id="TN_TeachState_State_0" value="Idle" />
+			<Text id="TN_TeachState_State_1" value="Switchpoint Set" />
+			<Text id="TN_TeachState_State_2" value="Switchpoint 2 Set" />
+			<Text id="TN_TeachState_State_3" value="Switchpoint 1+2 Set" />
+			<Text id="TN_TeachState_State_4" value="Wait for Command" />
+			<Text id="TN_TeachState_State_5" value="Busy" />
+			<Text id="TN_TeachState_State_6" value="Reserved" />
+			<Text id="TN_TeachState_State_7" value="Error" />
+			<Text id="TN_SetPointsBDC1" value="Setpoints" />
+			<Text id="TD_SetPointsBDC1" value="threshold measurement value of a sensor for the edge of a binary output signal 1" />
+			<Text id="TN_SetPointsBDC2" value="Setpoints" />
+			<Text id="TD_SetPointsBDC2" value="threshold measurement value of a sensor for the edge of a binary output signal 2" />
+			<Text id="TN_SetPoints_BDC1_SP1" value="(1) (BDC1, Q1)" />
+			<Text id="TN_SetPoints_BDC2_SP1" value="(1) (BDC2, Q2)" />
+			<Text id="TD_SetPoints_SP1" value="threshold measurement value" />
+			<Text id="TN_SetPoints_BDC1_SP2" value="(2) (BDC1, Q1)" />
+			<Text id="TN_SetPoints_BDC2_SP2" value="(2) (BDC2, Q2)" />
+			<Text id="TD_SetPoints_SP2" value="threshold measurement value" />
+			<Text id="TN_SwitchPointBDC1" value="Switchpoint BDC1" />
+			<Text id="TD_SwitchPointBDC1" value="mode, logic and hysteresis for binary data channel 1" />
+			<Text id="TN_SwitchPointBDC2" value="Switchpoint BDC2" />
+			<Text id="TD_SwitchPointBDC2" value="mode, logic and hysteresis for binary data channel 2" />
+			<Text id="TN_SwitchPoint_Logic" value="Logic" />
+			<Text id="TD_SwitchPoint_Logic" value="switching information is transmitted in inverted or not inverted manner" />
+			<Text id="TN_SwitchPoint_Logic_NO" value="NO" />
+			<Text id="TN_SwitchPoint_Logic_NC" value="NC" />
+			<Text id="TN_SwitchPoint_Mode" value="Mode" />
+			<Text id="TD_SwitchPoint_Mode" value="operation mode for binary signal" />
+			<Text id="TN_SwitchPoint_Mode_Deactivated" value="Deactivated" />
+			<Text id="TN_SwitchPoint_Mode_SinglePoint" value="Single point mode" />
+			<Text id="TN_SwitchPoint_Mode_Window" value="Window mode" />
+			<Text id="TN_SwitchPoint_Mode_TwoPoint" value="Two point mode" />
+			<Text id="TN_Switchpoint_Mode_Reflex" value="Reflex mode" />
+			<Text id="TN_SwitchPoint_Hysteresis" value="Hysteresis" />
+			<Text id="TN_Lot" value="Lot" />
+			<Text id="TD_Lot" value="production lot" />
+			<Text id="TN_DS" value="On delay switching output" />
+			<Text id="TD_DS" value="on delay for the binary data channel" />
+			<Text id="TN_DR" value="Off delay switching output" />
+			<Text id="TD_DR" value="off delay for the binary data channel" />
+			<Text id="TN_Temp_Komp" value="Temperature Compensation" />
+			<Text id="TN_Temp_Komp_OFF" value="Off" />
+			<Text id="TN_Temp_Komp_ON" value="On" />
+			<Text id="TN_OutputModeinSIOMode" value="Multi I/O (Pin 4)" />
+			<Text id="TD_OutputModeinSIOMode" value="polarity of the switching output" />
+			<Text id="TN_OutputModeinSIOMode_PP" value="PP" />
+			<Text id="TN_OutputModeinSIOMode_NPN" value="NPN" />
+			<Text id="TN_OutputModeinSIOMode_PNP" value="PNP" />
+			<Text id="TN_OutputModeinSIOMode_IO_LISTEN" value="Teach-In Analog Output" />
+			<Text id="TN_OutputModeinSIOMode_Synchron" value="Synchronisation" />
+			<Text id="TN_OutputModeinSIOMode_Multiplex" value="Multiplex" />
+			<Text id="TN_TeachvaluesBDC1SP1" value="Teachpoint SP1" />
+			<Text id="TN_TeachvaluesBDC1SP2" value="Teachpoint SP2" />
+			<Text id="TN_TeachvaluesBDC2SP1" value="Teachpoint SP1" />
+			<Text id="TN_TeachvaluesBDC2SP2" value="Teachpoint SP2" />
+			<Text id="TD_TeachvaluesBDC1SP1" value="Values detected during teach" />
+			<Text id="TD_TeachvaluesBDC1SP2" value="Values detected during teach" />
+			<Text id="TD_TeachvaluesBDC2SP1" value="Values detected during teach" />
+			<Text id="TD_TeachvaluesBDC2SP2" value="Values detected during teach" />
+			<Text id="TN_Teachvalues_TP1" value="TP1" />
+			<Text id="TD_Teachvalues_TP1" value="detected lower limit during teach-in procedure" />
+			<Text id="TN_Teachvalues_TP2" value="TP2" />
+			<Text id="TD_Teachvalues_TP2" value="detected upper limit during teach-in procedure" />
+			<Text id="TN_ProcessDataLimits" value="Process data limits" />
+			<Text id="TD_ProcessDataLimits" value="Process data limit values" />
+			<Text id="TN_ProcessDataLimits_Lower" value="lower" />
+			<Text id="TD_ProcessDataLimits_Lower" value="lower limit after power-up or reset" />
+			<Text id="TN_ProcessDataLimits_Upper" value="upper" />
+			<Text id="TD_ProcessDataLimits_Upper" value="upper limit after power-up or reset" />
+			<Text id="TN_Switchcounter" value="Switch counter" />
+			<Text id="TD_Switchcounter" value="number of switching after power-up or reset" />
+			<Text id="TN_Temperature" value="Temperature internal" />
+			<Text id="TD_Temperature" value="Sensor temperature" />
+			<Text id="TN_ProcessDataIn" value="Process data input" />
+			<Text id="TN_Measuredvalue" value="Measured value" />
+			<Text id="TN_SwitchstateBDC1" value="Switch state  (BDC1, Q1)" />
+			<Text id="TN_SwitchstateBDC2" value="Switch state  (BDC2, Q2)" />
+			<Text id="TN_Switchstate_False" value="Inactive" />
+			<Text id="TN_Switchstate_True" value="Active" />
+			<Text id="TN_Identification" value="Idendification" />
+			<Text id="TN_Observation" value="Observation" />
+			<Text id="TN_Parameter" value="Parameter" />
+			<Text id="TN_Parameter_Setup" value="Setup" />
+			<Text id="TN_Parameter_Control_Out1" value="Main Functions (Pin 4)" />
+			<Text id="TN_Parameter_Control_Out2" value="Main Functions (Pin 2)" />
+			<Text id="TN_Parameter_Control_BDC2" value="BDC2" />
+			<Text id="TN_Parameter_Teach_State" value="Teach State" />
+			<Text id="TN_Parameter_Teach_Values_BDC1" value="Teach Values BDC1, Q1" />
+			<Text id="TN_Parameter_Teach_Values_BDC2" value="Teach Values BDC2, Q2" />
+			<Text id="TN_Parameter_SingleValueTeach_Analog" value="Single Value Teach Analogoutput" />
+			<Text id="TN_Parameter_SingleValueTeach" value="Single Value Teach" />
+			<Text id="TN_Parameter_DynamicTeach" value="Dynamic Teach (Autoteach)" />
+			<Text id="TN_Parameter_Specific" value="Aditional Functions" />
+			<Text id="TN_Diagnosis" value="Diagnosis" />
+			<Text id="TN_Analog_Output_Mode" value="Multi I/O (Pin 2)" />
+			<Text id="TD_Analog_Output_Mode" value="operation mode for Multi I/O (Pin 2)" />
+			<Text id="TN_Analog_Output_Mode_Disabled" value="disabled" />
+			<Text id="TN_Analog_Output_Mode_0_20MA" value="0 to 20mA" />
+			<Text id="TN_Analog_Output_Mode_4_20MA" value="4 to 20mA" />
+			<Text id="TN_Analog_Output_Mode_0_10V" value="0 to 10V" />
+			<Text id="TN_Reserved" value="reserved" />
+			<Text id="TN_Analog_Range" value="Analog Range" />
+			<Text id="TN_Analog_Range_Lower" value="Lower Limit" />
+			<Text id="TN_Analog_Range_Upper" value="Upper Limit" />
+			<Text id="TN_Network" value="Network" />
+			<Text id="TN_Network_Role" value="Role in Network" />
+			<Text id="TN_Network_Master" value="Master" />
+			<Text id="TN_Network_Slave" value="Slave" />
+			<Text id="TN_Network_Number_Slave" value="Device No. (Master highest No.)" />
+			<Text id="TN_Parameter_Network_Out1" value="Comunication over Multi I/O (Pin 4)" />
+			<Text id="T_CONNECTION_M12_WIRE_2" value="I/U" />
+			<Text id="TN_Event_36000" value="Set point warning" />
+			<Text id="TD_Event_36000" value="Set points may be inappropriate" />
+			<Text id="TN_Event_36350" value="Test Event 1" />
+			<Text id="TD_Event_36350" value="Event appears by setting index 2 to value 240, Event disappears by setting index 2 to value 241" />
+			<Text id="TN_Event_36351" value="Test Event 2" />
+			<Text id="TD_Event_36351" value="Event appears by setting index 2 to value 242, Event disappears by setting index 2 to value 243" />
+		</PrimaryLanguage>
+		<Language xml:lang="de">
+			<Text id="T_VendorText" value="The Sensor People" />
+			<Text id="T_VendorUrl" value="www.leuze.com" />
+			<Text id="T_DeviceName" value="DMU230-3000/LA-M12" />
+			<Text id="T_DeviceFamily" value="DMU… series" />
+			<Text id="TN_ProductName_DMU230-3000_LA-M12" value="DMU230-3000/LA-M12" />
+			<Text id="TD_ProductDescription_Ultrasonic Distance Sensor" value="Ultrasonic Distance Sensor" />
+			<Text id="TN_SystemCommand_64" value="Teachen Anwenden" />
+			<Text id="TN_SystemCommand_65" value="Schaltpunkt 1 Einzelwert Teach" />
+			<Text id="TN_SystemCommand_66" value="Schaltpunkt 2 Einzelwert Teach" />
+			<Text id="TN_SystemCommand_67" value="Zweiwert Teach TP1 SP1" />
+			<Text id="TN_SystemCommand_68" value="Zweiwert Teach TP2 SP1" />
+			<Text id="TN_SystemCommand_69" value="Zweiwert Teach TP1 SP2" />
+			<Text id="TN_SystemCommand_70" value="Zweiwert Teach TP2 SP2" />
+			<Text id="TN_SystemCommand_71" value="Schaltpunkt 1 Dynamik Teach Start" />
+			<Text id="TN_SystemCommand_72" value="Schaltpunkt 1 Dynamik Teach Stop" />
+			<Text id="TN_SystemCommand_73" value="Schaltpunkt 2 Dynamik Teach Start" />
+			<Text id="TN_SystemCommand_74" value="Schaltpunkt 2 Dynamik Teach Stop" />
+			<Text id="TN_SystemCommand_79" value="Teachen Abbrechen" />
+			<Text id="TN_SystemCommand_161" value="Setzen der unteren Analoggrenze" />
+			<Text id="TN_SystemCommand_162" value="Setzen der oberen Analoggrenze" />
+			<Text id="TN_SystemCommand_163" value="Rücksetzen Diagnose Informationen" />
+			<Text id="TN_SystemCommand_164" value="Messung stoppen" />
+			<Text id="TN_SystemCommand_165" value="Messung starten" />
+			<Text id="TN_SystemCommand_166" value="Einzelmessung" />
+			<Text id="TN_SystemCommand_240" value="IO-Link 1.1 system test command 240, Event 8DFE appears" />
+			<Text id="TN_SystemCommand_241" value="IO-Link 1.1 system test command 241, Event 8DFE disappears" />
+			<Text id="TN_SystemCommand_242" value="IO-Link 1.1 system test command 242, Event 8DFF appears" />
+			<Text id="TN_SystemCommand_243" value="IO-Link 1.1 system test command 243, Event 8DFF disappears" />
+			<Text id="TN_TeachChannel" value="Teach-in Auswahl" />
+			<Text id="TD_TeachChannel" value="Adressierung eines bestimmten BDC auf welchen teach-in Kommandos angewendet werden sollen" />
+			<Text id="TN_TeachChannel_BDC1" value="(BDC1, Q1)" />
+			<Text id="TN_TeachChannel_BDC2" value="(BDC2, Q2)" />
+			<Text id="TN_TeachState" value="Teach Status" />
+			<Text id="TD_TeachState" value="Zustand Teach-In und Einstellung Teachpunkt" />
+			<Text id="TN_TeachState_State" value="Teach State" />
+			<Text id="TD_TeachState_State" value="Zustand Teach-In " />
+			<Text id="TN_TeachState_State_0" value="Nicht aktiv" />
+			<Text id="TN_TeachState_State_1" value="Schaltpunkt gesetzt" />
+			<Text id="TN_TeachState_State_2" value="Schaltpunkt 2 gesetzt" />
+			<Text id="TN_TeachState_State_3" value="Schaltpunkt 1 und 2 gesetzt" />
+			<Text id="TN_TeachState_State_4" value="Warten auf Kommando" />
+			<Text id="TN_TeachState_State_5" value="Aktiv" />
+			<Text id="TN_TeachState_State_6" value="Reserviert" />
+			<Text id="TN_TeachState_State_7" value="Fehler" />
+			<Text id="TN_SetPointsBDC1" value="Schaltpunkte" />
+			<Text id="TD_SetPointsBDC1" value="Schwellwert für Schaltausgang 1" />
+			<Text id="TN_SetPointsBDC2" value="Schaltpunkte" />
+			<Text id="TD_SetPointsBDC2" value="Schwellwert für Schaltausgang 2" />
+			<Text id="TN_SetPoints_BDC1_SP1" value="(1) (BDC1, Q1)" />
+			<Text id="TN_SetPoints_BDC2_SP1" value="(1) (BDC2, Q2)" />
+			<Text id="TD_SetPoints_SP1" value="Schwelle Messwert" />
+			<Text id="TN_SetPoints_BDC1_SP2" value="(2) (BDC1, Q1)" />
+			<Text id="TN_SetPoints_BDC2_SP2" value="(2) (BDC2, Q2)" />
+			<Text id="TD_SetPoints_SP2" value="Schwelle Messwert" />
+			<Text id="TN_SwitchPointBDC1" value="Schaltpunkt BDC1" />
+			<Text id="TD_SwitchPointBDC1" value="Modus, Logik und Hysterese für Schaltausgang (BDC1)" />
+			<Text id="TN_SwitchPointBDC2" value="Schaltpunkt BDC2" />
+			<Text id="TD_SwitchPointBDC2" value="Modus, Logik und Hysterese für Schaltausgang (BDC2)" />
+			<Text id="TN_SwitchPoint_Logic" value="Logik" />
+			<Text id="TD_SwitchPoint_Logic" value="Schaltinformation invertiert oder nicht invertiert" />
+			<Text id="TN_SwitchPoint_Logic_NO" value="NO" />
+			<Text id="TN_SwitchPoint_Logic_NC" value="NC" />
+			<Text id="TN_SwitchPoint_Mode" value="Modus" />
+			<Text id="TD_SwitchPoint_Mode" value="Betriebsmodus für Schaltausgang" />
+			<Text id="TN_SwitchPoint_Mode_Deactivated" value="Deaktiviert" />
+			<Text id="TN_SwitchPoint_Mode_SinglePoint" value="Schaltpunkt Modus" />
+			<Text id="TN_SwitchPoint_Mode_Window" value="Fenster Modus" />
+			<Text id="TN_SwitchPoint_Mode_TwoPoint" value="Zweipunkt Modus" />
+			<Text id="TN_Switchpoint_Mode_Reflex" value="Reflex Modus" />
+			<Text id="TN_SwitchPoint_Hysteresis" value="Hysterese" />
+			<Text id="TN_Lot" value="Serie" />
+			<Text id="TD_Lot" value="Produktions Los" />
+			<Text id="TN_DS" value="Einschaltverzögerung" />
+			<Text id="TD_DS" value="Einschaltverzögerung Schaltausgang" />
+			<Text id="TN_DR" value="Auschaltverzögerung" />
+			<Text id="TD_DR" value="Auschaltverzögerung Schaltausgang" />
+			<Text id="TN_Temp_Komp" value="Temperatur-Kompensation" />
+			<Text id="TN_Temp_Komp_OFF" value="Aus" />
+			<Text id="TN_Temp_Komp_ON" value="An" />
+			<Text id="TN_OutputModeinSIOMode" value="Multi I/O (Pin 4)" />
+			<Text id="TD_OutputModeinSIOMode" value="Polarität Schaltausgang" />
+			<Text id="TN_OutputModeinSIOMode_PP" value="PP" />
+			<Text id="TN_OutputModeinSIOMode_NPN" value="NPN" />
+			<Text id="TN_OutputModeinSIOMode_PNP" value="PNP" />
+			<Text id="TN_OutputModeinSIOMode_IO_LISTEN" value="Teach-In Analogausgang" />
+			<Text id="TN_OutputModeinSIOMode_Synchron" value="Synchronisation" />
+			<Text id="TN_OutputModeinSIOMode_Multiplex" value="Multiplex" />
+			<Text id="TN_TeachvaluesBDC1SP1" value="Teachpunkt SP1" />
+			<Text id="TN_TeachvaluesBDC1SP2" value="Teachpunkt SP2" />
+			<Text id="TN_TeachvaluesBDC2SP1" value="Teachpunkt SP1" />
+			<Text id="TN_TeachvaluesBDC2SP2" value="Teachpunkt SP2" />
+			<Text id="TD_TeachvaluesBDC1SP1" value="Erfasste Werte waehrend des Teachvorgangs" />
+			<Text id="TD_TeachvaluesBDC1SP2" value="Erfasste Werte waehrend des Teachvorgangs" />
+			<Text id="TD_TeachvaluesBDC2SP1" value="Erfasste Werte waehrend des Teachvorgangs" />
+			<Text id="TD_TeachvaluesBDC2SP2" value="Erfasste Werte waehrend des Teachvorgangs" />
+			<Text id="TN_Teachvalues_TP1" value="TP1" />
+			<Text id="TD_Teachvalues_TP1" value="Untere Grenze bei Teach" />
+			<Text id="TN_Teachvalues_TP2" value="TP2" />
+			<Text id="TD_Teachvalues_TP2" value="Obere Grenze bei Teach" />
+			<Text id="TN_ProcessDataLimits" value="Messwert" />
+			<Text id="TD_ProcessDataLimits" value="Bisher erfasste Grenzen der Prozessdaten" />
+			<Text id="TN_ProcessDataLimits_Lower" value="min" />
+			<Text id="TD_ProcessDataLimits_Lower" value="Untere Grenze nach Einschalten oder Rücksetzen " />
+			<Text id="TN_ProcessDataLimits_Upper" value="max" />
+			<Text id="TD_ProcessDataLimits_Upper" value="Obere Grenze nach Einschalten oder Rücksetzen " />
+			<Text id="TN_Switchcounter" value="Schaltzähler (BDC1, Q1)" />
+			<Text id="TD_Switchcounter" value="Schaltvorgänge nach Einschalten oder Rücksetzen" />
+			<Text id="TN_Temperature" value="Temperatur intern" />
+			<Text id="TD_Temperature" value="Temperatur Sensor" />
+			<Text id="TN_ProcessDataIn" value="Prozessdaten" />
+			<Text id="TN_Measuredvalue" value="Messwert" />
+			<Text id="TN_SwitchstateBDC1" value="Schaltzustand (BDC1, Q1)" />
+			<Text id="TN_SwitchstateBDC2" value="Schaltzustand (BDC2, Q2)" />
+			<Text id="TN_Switchstate_False" value="Inaktiv" />
+			<Text id="TN_Switchstate_True" value="Aktiv" />
+			<Text id="TN_Identification" value="Identifikation" />
+			<Text id="TN_Observation" value="Beobachten" />
+			<Text id="TN_Parameter" value="Parameter" />
+			<Text id="TN_Parameter_Setup" value="Einrichten" />
+			<Text id="TN_Parameter_Control_Out1" value="Hauptfunktionen (Pin 4)" />
+			<Text id="TN_Parameter_Control_Out2" value="Hauptfunktionen (Pin 2)" />
+			<Text id="TN_Parameter_Control_BDC2" value="BDC2" />
+			<Text id="TN_Parameter_Teach_State" value="Teach Status" />
+			<Text id="TN_Parameter_Teach_Values_BDC1" value="Teach Werte BDC1, Q1" />
+			<Text id="TN_Parameter_Teach_Values_BDC2" value="Teach Werte BDC2, Q2" />
+			<Text id="TN_Parameter_SingleValueTeach_Analog" value="Einzelwert Teach Analogausgang" />
+			<Text id="TN_Parameter_SingleValueTeach" value="Einzelwert Teach" />
+			<Text id="TN_Parameter_DynamicTeach" value="Dynamik Teach (Autoteach)" />
+			<Text id="TN_Parameter_Specific" value="Zusätzliche Funktionen" />
+			<Text id="TN_Diagnosis" value="Diagnose" />
+			<Text id="TN_Analog_Output_Mode" value="Multi I/O (Pin 2)" />
+			<Text id="TD_Analog_Output_Mode" value="Betriebsmodus für Multi I/O (Pin 2)" />
+			<Text id="TN_Analog_Output_Mode_Disabled" value="Deaktiviert" />
+			<Text id="TN_Analog_Output_Mode_0_20MA" value="0 to 20mA" />
+			<Text id="TN_Analog_Output_Mode_4_20MA" value="4 to 20mA" />
+			<Text id="TN_Analog_Output_Mode_0_10V" value="0 to 10V" />
+			<Text id="TN_Reserved" value="reserviert" />
+			<Text id="TN_Analog_Range" value="Analog Bereich" />
+			<Text id="TN_Analog_Range_Lower" value="Untere Grenze" />
+			<Text id="TN_Analog_Range_Upper" value="Obere Grenze" />
+			<Text id="TN_Network" value="Netzwerk" />
+			<Text id="TN_Network_Role" value="Rolle im Netzwerk" />
+			<Text id="TN_Network_Master" value="Master" />
+			<Text id="TN_Network_Slave" value="Slave" />
+			<Text id="TN_Network_Number_Slave" value="Geräte Nr. (Master höchste Nummer)" />
+			<Text id="TN_Parameter_Network_Out1" value="Kommunikation über Multi I/O (Pin 4)" />
+			<Text id="T_CONNECTION_M12_WIRE_2" value="I/U" />
+			<Text id="TN_Event_36000" value="Warnung Schwellwerte" />
+			<Text id="TD_Event_36000" value="Schwellwerte nicht geeignet" />
+			<Text id="TN_Event_36350" value="Test Event 1" />
+			<Text id="TD_Event_36350" value="Event appears by setting index 2 to value 240, Event disappears by setting index 2 to value 241" />
+			<Text id="TN_Event_36351" value="Test Event 2" />
+			<Text id="TD_Event_36351" value="Event appears by setting index 2 to value 242, Event disappears by setting index 2 to value 243" />
+		</Language>
+	</ExternalTextCollection>
+	<Stamp crc="1323661080"><Checker name="IODD-Checker V1.1.4 R1" version="V1.1.4.0"/></Stamp>
+</IODevice>
